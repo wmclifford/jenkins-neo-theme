@@ -35,8 +35,8 @@ module.exports = function (grunt) {
         cssmin: {
             minify: {
                 files: {
-                    'dist/neo-light.css': ['dist/neo-light.css'],
-                    'dist/neo-dark.css': ['dist/neo-dark.css']
+                    'dist/neo-light.min.css': ['dist/neo-light.css'],
+                    'dist/neo-dark.min.css': ['dist/neo-dark.css']
                 }
             }
         },
