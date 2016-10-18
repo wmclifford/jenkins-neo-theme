@@ -2,6 +2,7 @@
 @import 'functions';
 @import 'images';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,500,300);
+@import url(https://fonts.googleapis.com/css?family=Consolas:400,700,500,300);
 
 // @font-face {
 //     font-family: "custom font";
@@ -12,14 +13,34 @@
   font-family: @font-primary, sans-serif !important;
 }
 
+.CodeMirror,
+.CodeMirror pre,
+.CodeMirror-scroll,
+textarea.setting-input {
+  font-family: @font-console, monospace !important;
+}
+
+.CodeMirror-scroll {
+  overflow: hidden;
+}
+
 body, table, form, td, th, p {
   color: @color-text !important;
-  font-size: 14px !important;
+  font-size: 9pt !important;
 }
 
 body {
   line-height: 20px !important;
   background-color: @color-bg;
+}
+
+div.ok {
+  font-size: 8pt !important;
+  font-style: italic;
+}
+
+textarea {
+  font-size: 9pt !important;
 }
 
 a, a:hover, a:visited, a:link {
@@ -118,6 +139,11 @@ A.breadcrumbBarAnchor.mouseIsOverMenuSelector {
 
 #notification-bar{
   height: 50px !important;
+}
+
+#tasks .task {
+  font-size: 9pt;
+  margin-bottom: 2px;
 }
 
 #executors .pane-content > table tr td:first-child {
@@ -293,14 +319,17 @@ td {
     letter-spacing: .5px;
     transition: .1s ease-out;
     cursor: pointer;
-    border: none !important;
-    border-radius: 3px;
+    /*border: none !important;*/
+    border-radius: 12px;
+    border-style: solid !important;
+    border-width: 1px !important;
     display: inline-block;
-    height: 36px;
+    height: 32px;
     outline: 0;
     padding: 0 2rem;
     vertical-align: middle;
     -webkit-tap-highlight-color: transparent;
+    font-size: 8pt;
   }
   &.primary button {
     color: @color-white !important;
@@ -315,6 +344,18 @@ td {
       box-shadow: none;
     }
   }
+}
+
+#jenkins .jenkins-config table td .yui-button button,
+#jenkins .jenkins-config table td input[type='email'].setting-input,
+#jenkins .jenkins-config table td input[type='password'].setting-input,
+#jenkins .jenkins-config table td input[type='text'].setting-input {
+  height: 2.5em;
+  line-height: 2.5em;
+  -webkit-border-radius: 12px;
+  -mox-border-radius: 12px;
+  border-radius: 12px;
+  padding: 0 12px;
 }
 
 #enable-project .yui-button {
