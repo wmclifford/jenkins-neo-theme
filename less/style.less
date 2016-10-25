@@ -2,7 +2,9 @@
 @import 'functions';
 @import 'images';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,500,300);
-@import url(https://fonts.googleapis.com/css?family=Consolas:400,700,500,300);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700,500,300);
+
+@import url(http://www.w3schools.com/lib/w3.css);
 
 // @font-face {
 //     font-family: "custom font";
@@ -11,18 +13,6 @@
 
 * {
   font-family: @font-primary, sans-serif !important;
-}
-
-.CodeMirror,
-.CodeMirror pre,
-.CodeMirror-scroll,
-textarea.setting-input {
-  font-family: monospace !important;
-  line-height: 1.2em;
-}
-
-.CodeMirror-scroll {
-  overflow: hidden;
 }
 
 body, table, form, td, th, p {
@@ -42,6 +32,21 @@ div.ok {
 
 textarea {
   font-size: 9pt !important;
+}
+
+.CodeMirror,
+.CodeMirror pre,
+.CodeMirror-scroll,
+.cm-attribute, .cm-builtin, .cm-comment, .cm-def, .cm-meta,
+.setting-input,
+textarea.setting-input {
+  font-family: Inconsolata, monospace !important;
+  font-size: 10pt !important;
+  line-height: 1.2em;
+}
+
+.CodeMirror-scroll {
+  overflow: hidden;
 }
 
 a, a:hover, a:visited, a:link {
@@ -353,9 +358,9 @@ td {
 #jenkins .jenkins-config table td input[type='text'].setting-input {
   height: 2.5em;
   line-height: 2.5em;
-  -webkit-border-radius: 12px;
-  -mox-border-radius: 12px;
-  border-radius: 12px;
+  -webkit-border-radius: 9px;
+  -mox-border-radius: 9px;
+  border-radius: 9px;
   padding: 0 12px;
 }
 
